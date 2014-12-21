@@ -7,6 +7,6 @@ http://en.wikipedia.org/wiki/Levenshtein_distance
 ##sample output
 ```
 $ python levenshtein.py apple play
-4
-elapsed_time:0.000205993652344
+0.8
+elapsed_time:0.000264883041382
 ```

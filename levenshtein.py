@@ -26,7 +26,9 @@ def levenshtein_distance(s1, s2):
             # fill in the cell
             matrix[i][j] = min(matrix[i-1][j]+1 , matrix[i][j-1]+1, matrix[i-1][j-1]+delta)
 
-    return matrix[-1][-1]
+    # normalize
+    max_length = max(len(s1), len(s2))
+    return float(matrix[-1][-1])/max_length
 
 
 import sys
