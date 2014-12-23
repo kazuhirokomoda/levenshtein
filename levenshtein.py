@@ -9,6 +9,7 @@ def levenshtein_distance(s1, s2):
 
     matrix = [[0]*(len(s2)+1) for i in xrange(len(s1)+1)]
 
+    # initial
     for i in xrange(len(s1)+1):
         matrix[i][0] = i
 
@@ -25,6 +26,12 @@ def levenshtein_distance(s1, s2):
 
             # fill in the cell
             matrix[i][j] = min(matrix[i-1][j]+1 , matrix[i][j-1]+1, matrix[i-1][j-1]+delta)
+
+    # original
+    print matrix[-1][-1]
+    for i in xrange(len(matrix)):
+        print matrix[i]
+    print
 
     # normalize
     max_length = max(len(s1), len(s2))
